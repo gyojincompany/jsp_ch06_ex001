@@ -8,10 +8,9 @@
 </head>
 <body>
 	<%
-		String pw = session.getAttribute("memberPw").toString();		
+		String pw = (String) session.getAttribute("memberPw");		
 	
-		out.println(pw);
-	
+		out.println(pw);	
 	%>
 	<br><br>
 	memberPw 세션 속성 삭제 후
@@ -19,7 +18,7 @@
 	<%
 		session.removeAttribute("memberPw");	
 		
-		String pw2 = session.getAttribute("memberPw").toString();	
+		String pw2 = (String) session.getAttribute("memberPw");	
 		
 		out.println(pw2);	
 	%>	
